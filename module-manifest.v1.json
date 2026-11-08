@@ -1,0 +1,27 @@
+{
+	"contract": "module-manifest.v1",
+	"id": "wiki",
+	"name": "Knowledge Base",
+	"description": "Frappe Wiki on the client's ERPNext site: procedures, manuals and FAQs in spaces with page history and approval.",
+	"scope": "core",
+	"product": "back-office",
+	"frappeApp": "wiki",
+	"enable": {
+		"perCompany": true,
+		"method": "GET",
+		"path": "/app/wiki"
+	},
+	"probe": {
+		"perCompany": true,
+		"method": "GET",
+		"path": "/.well-known/nuculture-build/wiki.json"
+	},
+	"peopleRoles": {
+		"Owner": [
+			"Wiki Approver"
+		],
+		"Manager": [
+			"Wiki Approver"
+		]
+	}
+}
